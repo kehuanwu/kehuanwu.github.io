@@ -14,6 +14,8 @@ section {
     margin-left: 30vw;
     margin-right: 30vw;
     margin-bottom: 4vh;
+    /* min-width: 50px; */
+    /* max-width: 800px; */
 }
 p {
     line-height: 180%;
@@ -21,6 +23,7 @@ p {
 }
 img {
     width: 100%;
+    /* usually the default */
 }
 .sparrow {
     padding: 7%;
