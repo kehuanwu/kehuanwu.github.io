@@ -35,3 +35,18 @@ img {
     margin-top: 30pt;
     display: inline-block;
 }
+
+nav {
+    max-width: 300px;
+    float: left;
+    border: 4mm ridge rgba(211, 220, 50);
+    position: sticky;
+    top: 20px;
+    left: 20px;
+    background-color: rgb(255, 248, 195);
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+hr {
+    margin-bottom: 20px;
+}
