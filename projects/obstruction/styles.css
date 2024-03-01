@@ -29,8 +29,7 @@ body {
 }
 
 .poop {
-    width: 200px;
-    height: 200px;
+    width: 130px;
     position: absolute;
     opacity: 1; /* Initial opacity */
     transition: opacity 0.5s ease-in 0s, opacity 1.5s ease-out 0.2s; /* Transition for opacity with ease-in-out timing */
