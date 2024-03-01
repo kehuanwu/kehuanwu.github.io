@@ -3,6 +3,100 @@ img {
     /* usually the default */
 }
 
+body {
+    background-color: black;
+    width: 100%;
+    margin: 200px 100px;
+    overflow: hidden;
+}
+
 .car {
-    min-width: 2000px;
+    min-width: 1500px;
+    position: relative; /* Set car position to relative */
+    display: inline-block;
+    z-index: 1;
+}
+
+.poop-container {
+    position: absolute;
+    top: 0; /* Position poop container relative to the car */
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+
+.poop {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    opacity: 1; /* Initial opacity */
+    transition: opacity 0.5s ease-in 0s, opacity 1.5s ease-out 0.2s; /* Transition for opacity with ease-in-out timing */
+}
+
+.poop:hover {
+    opacity: 0; /* Make the poop disappear on hover */
+    transition-delay: 0s; /* Remove delay on hover */
+}
+
+.poop-1 {
+    width: 180px;
+    top: 45%;
+    left: 35%;
+}
+
+.poop-2 {
+    top: 50%;
+    left: 60%;
+}
+
+.poop-3 {
+    top: 70%;
+    left: 40%;
+}
+
+.poop-4 {
+    width: 100px;
+    top: 70%;
+    left: 15%;
+}
+
+.poop-5 {
+    width: 130px;
+    top: 60%;
+    left: 93%;
+}
+
+.poop-6 {
+    width: 90px;
+    top: 35%;
+    left: 85%;
+}
+
+.poop:not(:hover) {
+    transition-delay: 3s; /* Delay reappearance after hover ends */
+}
+
+/* bird flying across the screen */
+.bird {
+    width: 400px;
+    background-size: cover;
+    position: absolute;
+    bottom: -100px; /* Start position outside the bottom edge of the screen */
+    left: 0; /* Start position outside the left edge of the screen */
+    animation: flyDiagonal 6s linear infinite; /* Animation */
+    animation-delay: 5s; /* Delay between each loop */
+    z-index: 4;
+    transform: rotate(-110deg);
+}
+
+@keyframes flyDiagonal {
+    0% {
+        bottom: -100px; /* Start position outside the bottom edge of the screen */
+        left: 0; /* Start position outside the left edge of the screen */
+    }
+    100% {
+        bottom: calc(100% + 100px); /* End position at the top edge of the screen */
+        left: calc(100% + 1200px); /* End position at the right edge of the screen */
+    }
 }
