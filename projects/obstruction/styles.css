@@ -1,0 +1,8 @@
+img {
+    width: 100%;
+    /* usually the default */
+}
+
+.car {
+    min-width: 2000px;
+}
