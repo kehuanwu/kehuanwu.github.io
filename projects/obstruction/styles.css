@@ -1,6 +1,5 @@
 img {
     width: 100%;
-    /* usually the default */
 }
 
 body {
@@ -13,15 +12,16 @@ body {
 .car {
     min-width: 1500px;
     position: absolute;
-    top:0;
-    left:0;
+    top: 0;
+    left: 0;
     display: inline-block;
     z-index: 1;
 }
 
 .poop-container {
     position: absolute;
-    top: -180px; /* Position poop container relative to the car */
+    /* Position poop container relative to the car */
+    top: -180px;
     left: -50px;
     width: 100%;
     height: 100%;
@@ -31,13 +31,17 @@ body {
 .poop {
     width: 130px;
     position: absolute;
-    opacity: 1; /* Initial opacity */
-    transition: opacity 0.5s ease-in 0s, opacity 1.5s ease-out 0.2s; /* Transition for opacity with ease-in-out timing */
+    opacity: 1;
+    /* Initial opacity */
+    transition: opacity 0.5s ease-in 0s, opacity 1.5s ease-out 0.2s;
+    /* Transition for opacity with ease-in-out timing */
 }
 
 .poop:hover {
-    opacity: 0; /* Make the poop disappear on hover */
-    transition-delay: 0s; /* Remove delay on hover */
+       /* Make the poop disappear on hover */
+    opacity: 0;
+        /* Remove delay on hover */
+    transition-delay: 0s;
 }
 
 .poop-1 {
@@ -74,8 +78,9 @@ body {
     left: 85%;
 }
 
+/* Delay reappearance after hover ends */
 .poop:not(:hover) {
-    transition-delay: 3s; /* Delay reappearance after hover ends */
+    transition-delay: 3s;
 }
 
 /* bird flying across the screen */
@@ -83,21 +88,31 @@ body {
     width: 400px;
     background-size: cover;
     position: absolute;
-    bottom: -100px; /* Start position outside the bottom edge of the screen */
-    left: 0; /* Start position outside the left edge of the screen */
-    animation: flyDiagonal 6s linear infinite; /* Animation */
-    animation-delay: 5s; /* Delay between each loop */
+    /* Start position outside the bottom edge of the screen */
+    bottom: -100px;
+    /* Start position outside the left edge of the screen */
+    left: 0;
+    /* Animation */
+    animation: flyDiagonal 6s linear infinite;
+
+    /* Delay between each loop */
+    animation-delay: 5s;
     z-index: 4;
     transform: rotate(-105deg);
 }
 
 @keyframes flyDiagonal {
     0% {
-        bottom: -100px; /* Start position outside the bottom edge of the screen */
-        left: 0; /* Start position outside the left edge of the screen */
+        /* Start position outside the bottom edge of the screen */
+        bottom: -100px;
+        /* Start position outside the left edge of the screen */
+        left: 0;
     }
+
     100% {
-        bottom: calc(100% + 100px); /* End position at the top edge of the screen */
-        left: calc(100% + 1200px); /* End position at the right edge of the screen */
+        /* End position at the top edge of the screen */
+        bottom: calc(100% + 100px);
+        /* End position at the right edge of the screen */
+        left: calc(100% + 1200px);
     }
 }
