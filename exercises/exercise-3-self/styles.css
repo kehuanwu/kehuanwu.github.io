@@ -1,0 +1,67 @@
+body {
+    font-family:'Courier New', Courier, monospace;
+    background-color: lightyellow;
+}
+h1 {
+    font-size: 40pt;
+    font-weight: 500;
+    color: crimson;
+}
+h2 {
+    font-size: 23pt;
+}
+section {
+    margin-left: 30vw;
+    margin-right: 30vw;
+    margin-bottom: 4vh;
+    /* min-width: 50px; */
+    /* max-width: 800px; */
+}
+p {
+    line-height: 180%;
+    margin-bottom: 3%;
+}
+img {
+    width: 100%;
+    /* usually the default */
+}
+.sparrow {
+    padding: 7%;
+    border: 1px solid rgb(0, 0, 0);;
+}
+.img-text {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 15pt;
+    margin-top: 30pt;
+    display: inline-block;
+}
+
+nav {
+    max-width: 300px;
+    float: left;
+    border: 4mm ridge rgba(211, 220, 50);
+    position: sticky;
+    top: 20px;
+    left: 20px;
+    background-color: rgb(255, 248, 195);
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+hr {
+    margin-bottom: 20px;
+}
+
+/* ----------------------------------------  */
+
+nav ol {
+    list-style: none;
+}
+
+ol {
+    padding-left: 2rem
+}
+
+nav li {
+border-bottom:1px solid darkgoldenrod;
+
+}
