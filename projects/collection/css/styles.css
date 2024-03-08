@@ -17,6 +17,7 @@ body {
 	max-width: 100%;
 	position: relative;
 	margin: auto;
+	padding-bottom: 5rem ;
 }
 
 .opener {
@@ -172,11 +173,11 @@ a {
 	margin-top: 2rem;
 }
 
-.directory-title {
+.subtitle {
 	margin-bottom: 4rem;
 	font-family: jabin;
 	font-weight: 20;
-	font-size: 20px;
+	font-size: 30px;
 }
 
 .stone-container {
@@ -184,6 +185,7 @@ a {
     flex-wrap: wrap;
     gap: 3rem; /* Adjust the gap between stones */
 	min-width: 800px;
+	border-bottom: 1px solid rgb(91, 91, 91);
 }
 
 .stone {
@@ -220,4 +222,11 @@ img:hover{
 
 .pyrite img{
 	width: 30%;
+}
+
+
+/* story behind the stones */
+
+.story {
+	margin-bottom: 2rem;
 }
