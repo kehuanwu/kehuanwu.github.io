@@ -3,6 +3,11 @@
 	src: url('../font/BradfordMonoLL-Regular.otf');
 }
 
+@font-face {
+    font-family: 'jabin';
+	src: url('../font/Jabin-Typeface.ttf');
+}
+
 /* grid layout example */
 body {
 	background-color: rgb(14, 14, 14);
@@ -11,17 +16,55 @@ body {
 	font-size: 10pt;
 	max-width: 100%;
 	position: relative;
+	margin: auto;
+}
+
+.opener {
+	left: 2rem;
+	padding: 1rem;
+	margin-left: 2rem;
+	margin-top: 15rem;
+	font-family: jabin;
+	font-size: 100px;
+	font-weight: 20;
+}
+
+.star {
+	display: inline-block;
+	animation: opener-star 3s ease infinite reverse;
+	font-size: 50px;
+}
+
+@keyframes opener-star {
+	/* happening at 0% of time / beginning : */
+	0% {   
+		transform: rotate(0deg) scale(1);    	/* in transform, no need to change lines */
+	}
+
+	/* happening at 50% of time: / end */
+	50% {
+		transform: rotate(360deg) scale(2.3);
+	}
+
+	/* happening at 100% of time: / end */
+	100% {
+		transform: rotate(360deg) scale(1);
+	}
+}
+
+.content {
 	margin: 0;
 	/* padding: 4rem; */
 	display: grid;
 	grid-template-columns: 340px 1fr;
 	/* 1fr = 1 fraction of the remaining width */
-
 	gap: 2rem;
 	/* gap between the columns */
 	align-items: start;
 	/* the border wraps immediately below the grid */
 }
+
+
 
 a:hover {
 	color: blueviolet;
@@ -122,7 +165,7 @@ a {
 }
 
 /*  ---------------  */
-/*       content    */
+/*       directory    */
 /*  ---------------- */
 
 .directory {
@@ -131,6 +174,9 @@ a {
 
 .directory-title {
 	margin-bottom: 4rem;
+	font-family: jabin;
+	font-weight: 20;
+	font-size: 20px;
 }
 
 .stone-container {
@@ -171,10 +217,6 @@ a {
 img:hover{
 	filter: drop-shadow(12px 12px 7px rgba(0, 0, 0, 0.5));
   }
-
-/* .opalite-1 img {
-    width: 30%;
-} */
 
 .pyrite img{
 	width: 30%;
