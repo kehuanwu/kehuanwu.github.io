@@ -132,7 +132,7 @@ Navigation styles
 
 .navigation {
 	border: 1px solid darkgoldenrod;
-	position: sticky;
+	position: relative;
 	top: 2rem;
 	left: 2rem;
 	padding: 1rem;
@@ -404,6 +404,8 @@ Bio styles
 		grid-template-columns: 400px 1fr;
 	}
 	.navigation {
-
+		position: sticky;
+		/* made the nav sticky on the large screen */
+		top: 2rem;
 	}
 }

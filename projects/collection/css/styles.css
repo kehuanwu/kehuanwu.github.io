@@ -291,3 +291,7 @@ img:hover {
 .story:hover {
 	color: rgb(195, 195, 195);
 }
+
+#colophon-id {
+	margin-top: 5rem;
+}
