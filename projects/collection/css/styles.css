@@ -1,30 +1,34 @@
 @font-face {
-    font-family: 'bradford';
+	font-family: 'bradford';
 	src: url('../font/BradfordMonoLL-Regular.otf');
 }
 
 @font-face {
-    font-family: 'jabin';
+	font-family: 'jabin';
 	src: url('../font/Jabin-Typeface.ttf');
+}
+
+html {
+	cursor: url('../image/cursor.svg'), auto;
 }
 
 /* grid layout example */
 body {
-	background-color: rgb(14, 14, 14);
+	background-color: rgb(28, 28, 28);
 	color: rgb(195, 195, 195);
 	font-family: 'bradford';
 	font-size: 10pt;
 	max-width: 100%;
 	position: relative;
 	margin: auto;
-	padding-bottom: 5rem ;
+	padding-bottom: 5rem;
 }
 
 .opener {
 	left: 2rem;
 	padding: 1rem;
 	margin-left: 2rem;
-	margin-top: 15rem;
+	padding-top: 15rem;
 	font-family: jabin;
 	font-size: 100px;
 	font-weight: 20;
@@ -34,12 +38,29 @@ body {
 	display: inline-block;
 	animation: opener-star 3s ease infinite reverse;
 	font-size: 50px;
+	transition: 1s;
+
+	&:hover {
+		filter: drop-shadow(0 0 0.3rem cyan);
+		color: cyan;
+	}
+}
+
+.glow-text {
+	transition: 1s;
+}
+
+.glow-text:hover {
+	filter: drop-shadow(0 0 2rem cyan);
+	color: cyan;
 }
 
 @keyframes opener-star {
+
 	/* happening at 0% of time / beginning : */
-	0% {   
-		transform: rotate(0deg) scale(1);    	/* in transform, no need to change lines */
+	0% {
+		transform: rotate(0deg) scale(1);
+		/* in transform, no need to change lines */
 	}
 
 	/* happening at 50% of time: / end */
@@ -66,17 +87,13 @@ body {
 }
 
 
-
-a:hover {
-	color: blueviolet;
-}
-
 img {
 	width: 100%;
 	display: inline-block;
 	/* border: 1px solid black; */
 	/* padding: 1rem; */
 	/* box-sizing: border-box; */
+	transition: 1s;
 }
 
 ol {
@@ -131,7 +148,7 @@ a {
 
 	&:hover {
 		color: cyan;
-		filter: blur(3px);
+		/* filter: blur(3px); */
 	}
 }
 
@@ -149,9 +166,11 @@ a {
 }
 
 @keyframes current-header {
+
 	/* happening at 0% of time / beginning : */
-	0% {   
-		transform: rotate(0deg) scale(1);    	/* in transform, no need to change lines */
+	0% {
+		transform: rotate(0deg) scale(1);
+		/* in transform, no need to change lines */
 	}
 
 	/* happening at 50% of time: / end */
@@ -181,47 +200,74 @@ a {
 }
 
 .stone-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 3rem; /* Adjust the gap between stones */
+	display: flex;
+	flex-wrap: wrap;
+	gap: 3rem;
+	/* Adjust the gap between stones */
 	min-width: 800px;
 	border-bottom: 1px solid rgb(91, 91, 91);
 }
 
 .stone {
-    flex: 1 0 calc(33.33% - 3rem); /* Adjust the width of each stone (33.33% - gap) */
-    max-width: calc(33.33% - 3rem);
-    box-sizing: border-box;
+	flex: 1 0 calc(33.33% - 3rem);
+	/* Adjust the width of each stone (33.33% - gap) */
+	max-width: calc(33.33% - 3rem);
+	box-sizing: border-box;
 	margin-bottom: 30px;
-}
-
-.stone img {
-    width: 70%;
-	margin: auto; /* Center the image horizontally */
-    display: block;
-	margin-top: 50px auto;
-    margin-bottom: 30px; /* Adjust the spacing between image and label */
 	min-width: 300px;
 }
 
+.stone img {
+	width: 80%;
+	margin: auto;
+	/* Center the image horizontally */
+	display: block;
+	margin-top: 50px auto;
+	margin-bottom: 30px;
+	/* Adjust the spacing between image and label */
+}
+
 .stone p {
-    text-align: center;
+	text-align: center;
 }
 
 
 .label {
 	border-bottom: 1px solid rgb(91, 91, 91);
 	padding: 0.5rem;
-	transition: color 1s ease;
+	transition: all 1s ease;
 	margin: 0;
 }
 
-img:hover{
-	filter: drop-shadow(12px 12px 7px rgba(0, 0, 0, 0.5));
-  }
+img:hover {
+	filter: drop-shadow(0 0 1rem cyan);
+}
 
-.pyrite img{
+
+/* adjusting stone image size */
+
+.galena img {
+	width: 60%;
+}
+
+.kyanite img {
+	width: 40%;
+}
+
+.labradorite img {
+	width: 60%;
+}
+
+.pyrite img {
 	width: 30%;
+}
+
+.opalite-1 img, .opalite-2 img {
+	width: 45%;
+}
+
+.silver-aura-quartz img {
+	width: 90%;
 }
 
 
@@ -229,4 +275,18 @@ img:hover{
 
 .story {
 	margin-bottom: 2rem;
+	max-width: calc(50%);
+	transition: 1s;
+}
+
+#story-id {
+	margin-top: 5rem;;
+}
+
+.story-directory {
+	color: rgb(121, 121, 121);
+}
+
+.story:hover {
+	color: rgb(195, 195, 195);
 }
